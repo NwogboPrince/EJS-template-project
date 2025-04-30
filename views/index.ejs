@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS tags</title>
+</head>
+<body>
+    <% if (locals.numberOfLetters) { %>
+        <h1>There are <%= numberOfLetters %> letters in your name.</h1>
+    <% } else { %>
+        <h1 style="text-align: center;">Enter your name below 👇</h1>
+    <% } %>
+    <form action="/submit" method="POST" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px; max-width: 300px; margin: 20px auto;">
+        <input type="text" name="fName" placeholder="First name" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 100%;" />
+        <input type="text" name="lName" placeholder="Last name" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 100%;" />
+        <input type="submit" value="OK" style="padding: 10px 20px; border: none; border-radius: 5px; background-color: #007BFF; color: white; cursor: pointer;" />
+    </form>
+   
+</body>
+</html>
